@@ -109,11 +109,33 @@ if (randNum < 25) {
   </div>
   
 <!-- <script>!function(e,i,t,n,o){var a,c,r,s,d;for((o=e[n]=e[n]||{})._q=[],c=0,r=(a=["initialize","identify","updateOptions","pageLoad"]).length;c<r;++c)!function(e){o[e]=o[e]||function(){o._q[e===a[0]?"unshift":"push"]([e].concat([].slice.call(arguments,0)))}}(a[c]);(s=i.createElement(t)).async=!0,s.src="https://cdn.pendo.io/agent/static/50bfa725-733b-4996-4ef1-01f5c679e710/pendo.js",(d=i.getElementsByTagName(t)[0]).parentNode.insertBefore(s,d)}(window,document,"script","pendo"),pendo.initialize({visitor:{id:visitorParam||visitor||"VISITOR-UNIQUE-ID",role:role||"user"},account:{id:accountParam||account_id}})</script><title>Pendo Experience</title><link href="/ps-sandbox/static/css/main.7c93a296.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ps-sandbox/static/js/main.2b775cb4.js"></script> -->
-<script>
+
+  <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
   analytics.load("olKUV7a6Yiaq1rKUGrEflgtZZojwYb4s");
   analytics.page();
   }}();
+  
+  analytics.identify(visitorParam, {
+  name: "Peter Gibbons", 
+  email: "peter@initech.com", 
+  plan: "premium", 
+  logins: 5
+});
+  
+  analytics.group(accountParam, {
+  name: "Initech", 
+  industry: "Technology",
+  employees: 329, 
+  plan: "enterprise"
+});
+  
+    analytics.track("Registered", {
+  groupId: accountParam,
+  plan: "Pro Annual",
+  accountType: "Facebook"
+});
+  
 </script>
   
 </body>
